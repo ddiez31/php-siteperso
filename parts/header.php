@@ -11,6 +11,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 
 <body>
@@ -21,8 +23,5 @@
 
 
 
-</body>
-
-</html>
 
 

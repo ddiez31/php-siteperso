@@ -2,10 +2,9 @@
     "name": "Doe",
     "first_name": "Jane",
     "occupation": "Web developer",
-    "experiences": [
-        {
+    "experiences": [{
             "year": 2017,
-            "company": "Samll Startup"
+            "company": "Small Startup"
         },
         {
             "year": 2016,
@@ -13,6 +12,10 @@
         },
         {
             "year": 2015,
+            "company": "Simplon.co"
+        },
+        {
+            "year": 2014,
             "company": "Simplon.co"
         }
     ]

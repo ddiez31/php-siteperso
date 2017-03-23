@@ -1,18 +1,35 @@
-<div class="jumbotron">
+<div class="jumbotron home">
     <div class="container">
-        <h1>maison sucré maison</h1>
-        <h1>Welcome to my awesome Site</h1>
-        <p>Bla bla bla</p>
+        <div class="identity">
+            <h1>
+                <?php identity(); ?>
+            </h1>
+            <h1>
+                <?php occupation(); ?>
+            </h1>
+        </div>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-8 col-md-5 photo">
                 <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/350x150">
+                    <img src="http://placehold.it/200x200">
                 </a>
                 <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/350x150">
+                    <img src="http://placehold.it/200x200">
                 </a>
                 <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/350x150">
+                    <img src="http://placehold.it/200x200">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-md-5 photo">
+                <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/550x350">
+                </a>
+                <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/550x350">
                 </a>
             </div>
         </div>

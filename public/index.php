@@ -15,3 +15,4 @@ require __DIR__ . '/../lib/functions.php';
 getPart('header');
 getContent();
 getPart('footer');
+?>

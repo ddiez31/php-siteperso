@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
 }
 
 html {
@@ -12,11 +11,85 @@ html {
 body {
     width: 100%;
     height: 100%;
-    padding-bottom: 70px;
+    font-family: 'Ubuntu';
+}
+
+.nav {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 ul {
     list-style: none;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+.jumbotron {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.jumbotron.home {
+    background-image: url('laptop-926775_1280.jpg');
+}
+
+.jumbotron.bio {
+    background-image: url('greece-998496_1280.jpg');
+}
+
+.jumbotron.contact {
+    background-image: url('phone-1767113_1280.jpg');
+    text-align: right;
+    color: black;
+}
+
+.container.contact {
+    color: white;
+}
+
+.form {
+    float: right;
+    padding-left: 10em;
+}
+
+.identity {
+    padding-bottom: 5em;
+    color: white;
+}
+
+.career {
+    padding-bottom: 2em;
+    color: white;
+}
+
+.row {
+    padding-bottom: 5em;
+}
+
+footer {
+    background-color: #C5B7B4;
+    height: 100%;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
