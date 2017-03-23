@@ -77,6 +77,10 @@ ul {
     padding-bottom: 5em;
 }
 
+.container.thanks {
+    height: 30em;
+}
+
 footer {
     background-color: #C5B7B4;
     height: 100%;

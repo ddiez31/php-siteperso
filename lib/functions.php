@@ -23,52 +23,52 @@ function getContent() {
 }
 
 function getPart($name) {
-	if(!isset($_GET["admin"]) && !isset($_GET["save"])) {
+	if(!isset($_GET["admin"])) {
 		include __DIR__ . '/../parts/'. $name . '.php';
 	}
 }
 
-function getUserData() {
+function getUserData($word, $nbr) {
 	$data = file_get_contents('../data/user.json', FILE_USE_INCLUDE_PATH);
 	$dataJson = json_decode($data, true);
-	echo $data;
-	echo '<br>';
-	var_dump($dataJson);
-}
-
-function identity() {
-	$data = file_get_contents('../data/user.json', FILE_USE_INCLUDE_PATH);
-	$dataJson = json_decode($data, true);
-	$name = $dataJson['name'];
-	$first_name = $dataJson['first_name'];
-	echo $name.' '.$first_name;
-}
-
-function occupation() {
-	$data = file_get_contents('../data/user.json', FILE_USE_INCLUDE_PATH);
-	$dataJson = json_decode($data, true);
-	$occupation = $dataJson['occupation'];
-	echo $occupation;
-}
-
-function experiences($nbr) {
-	$data = file_get_contents('../data/user.json', FILE_USE_INCLUDE_PATH);
-	$dataJson = json_decode($data, true);
-	$experiences = $dataJson['experiences'];
-	echo $experiences[$nbr]['year'].' '.$experiences[$nbr]['company'];
+	if($word == 'identity') {
+		$name = $dataJson['name'];
+		$first_name = $dataJson['first_name'];
+		echo $name.' '.$first_name;
+	} if($word == 'occupation') {
+		$name = $dataJson['name'];
+		$occupation = $dataJson['occupation'];
+		echo $occupation;
+	} if($word == 'experiences') {
+		$experiences = $dataJson['experiences'];
+		echo $experiences[$nbr]['year'].' '.$experiences[$nbr]['company'];
+	}
 }
 
 function contact() {
-	echo 'ok';
+	$contact = array('lastName' => $_POST['last_name'], 'firstName' => $_POST['first_name'], 'email' => $_POST['email'], 'message' => $_POST['message']);
+	echo ' '.$_POST['last_name'].' '.$_POST['first_name'].'!';
+	$file = '../data/last_message.json';
+	if (!file_exists($file)) {
+		$handle = fopen("../data/last_message.json", "w+");
+	}
+	$current = file_get_contents($file, FILE_USE_INCLUDE_PATH);
+	$current = json_encode($contact, true);
+	file_put_contents($file, $current);
 }
 
 function lastMessage() {
-	// $data = file_get_contents('../data/last_message.json', FILE_USE_INCLUDE_PATH);
-	// $dataJson = json_decode($data, true);
-	// echo $dataJson['last_name'];
-	// foreach ($dataJson as $key => $value) {
-	// 	echo $key.' '.$value;
-	// }
+	$data = file_get_contents('../data/last_message.json', FILE_USE_INCLUDE_PATH);
+	$dataJson = json_decode($data, true);
+	$name = $dataJson['lastName'];
+	$first_name = $dataJson['firstName'];
+	$mail = $dataJson['email'];
+	$message = $dataJson['message'];
+	echo 'From '.$name.' '.$first_name;
+	echo '<br>';
+	echo $mail;
+	echo '<br>';
+	echo 'Message:<br>'.$message;
 }
 
 ?>

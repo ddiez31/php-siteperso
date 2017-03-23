@@ -2,7 +2,7 @@
     <div class="container">
         <div class="identity">
             <h1>
-                <?php identity(); ?>
+                <?php getUserData('identity', null); ?>
             </h1>
             <h2>Career</h2>
         </div>
@@ -11,11 +11,11 @@
         <div class="row">
             <div class="col-md-6">
                 <h3 class="career">
-                    <?php experiences(0); ?>
+                    <?php getUserData('experiences', 0); ?>
                     <a href="#" class="thumbnail">
                         <img src="http://placehold.it/600x200">
                     </a>
-                    <?php experiences(1); ?>
+                    <?php getUserData('experiences', 1); ?>
                     <a href="#" class="thumbnail">
                         <img src="http://placehold.it/600x200">
                     </a>
@@ -23,11 +23,11 @@
             </div>
             <div class="col-md-6">
                 <h3 class="career">
-                    <?php experiences(2); ?>
+                    <?php getUserData('experiences', 2); ?>
                     <a href="#" class="thumbnail">
                         <img src="http://placehold.it/600x200">
                     </a>
-                    <?php experiences(3); ?>
+                    <?php getUserData('experiences', 3); ?>
                     <a href="#" class="thumbnail">
                         <img src="http://placehold.it/600x200">
                     </a>

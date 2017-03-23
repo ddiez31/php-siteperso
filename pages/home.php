@@ -2,10 +2,10 @@
     <div class="container">
         <div class="identity">
             <h1>
-                <?php identity(); ?>
+                <?php getUserData('identity', null); ?>
             </h1>
             <h1>
-                <?php occupation(); ?>
+                <?php getUserData('occupation', null); ?>
             </h1>
         </div>
     </div>

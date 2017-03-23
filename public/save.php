@@ -1,13 +1,12 @@
-<?php
-// $contact = array('lastName' => $_GET['last_name'], 'firstName' => $_GET['first_name'], 'email' => $_GET['email'], 'message' => $_GET['message']);
-// 	echo json_encode($contact);
-// 	$file = '../data/last_message.json';
-// 	$current = file_get_contents($file);
-// 	$current = json_encode($contact);
-// 	file_put_contents($file, $current, FILE_APPEND | LOCK_EX);
-contact();
-?>
+<div class="container thanks">
+    <h3>Your message has been sent!</h3>
+    <h3>Thanks you
+        <?php
+        contact();
+        ?>
+    </h3>
+</div>
+
 
 <hr>
-<a href="admin.php">Admin</a>
-
+<a href="/?admin">Admin</a>

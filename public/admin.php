@@ -5,3 +5,6 @@
 <?php
 lastMessage();
 ?>
+
+<hr>
+<a href="/?home">Home</a>

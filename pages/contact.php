@@ -1,6 +1,6 @@
 <div class="jumbotron contact">
     <div class="container contact">
-        <form class="form" role="form" method="GET" action="/save">
+        <form class="form" method="POST" action="/?save">
             <h2>Contact me</h2>
             <div class="form-group">
                 <label for="name">Last-Name</label>
